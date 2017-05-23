@@ -13,7 +13,7 @@ Simply extend your current viewcontroller like this
 ```
 
 and override the function returning the image you would like to use to apply filter
-`-(UIImage * )imageToShowInView;`
+```-(UIImage * )imageToShowInView;```
 
 Depending on your requirements, you may also add your *YourViewController* in a container and set it's custom size
 
@@ -41,16 +41,17 @@ To Add Custom Filter, follow these steps
 3. Create a Dictionary of filter similar to above one
 
 > Format:
-         ```
-         { 
-             "name" : "Filter Name",   //Following Variable is not used
-             "shader" : "GLFilter Fragment Shader File with Extension glsl",//This is the shader of the photo filter where the main filter logic resides
-             "files":{
-                     "key_1" : "filename.png", //To access the file in shader, it's location will be: u_key_1
-                     "key_2" : "filename.png", //To access the file in shader, it's location will be: u_key_2
+```
+NSDictionary * filterDict = @{ 
+             @"name" : @"Filter Name",   //Following Variable is not used
+             @"shader" : @"GLFilter Fragment Shader File with Extension glsl",//This is the shader of the photo filter where the main filter logic resides
+             @"files":@{
+                     @"key_1" : @"filename.png", //To access the file in shader, it's location will be: u_key_1
+                     @"key_2" : @"filename.png", //To access the file in shader, it's location will be: u_key_2
                      //more keys if required
                      }
-            }```
+            }
+```
      
 
 
