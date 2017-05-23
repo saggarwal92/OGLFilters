@@ -18,17 +18,17 @@ Depending on your requirements, you may also add your *YourViewController* in a 
 
 
 # SAMPLE FILTER INCLUDED IN THE APPLICATION
-NSDictionary * filterDict = {
-                                    "name":"Filter 2",
-                                    "shader":"noob_filter_shader",
-                                    "files":{
-                                        "Blowout" : "blowout.png",    //Location in Shader: u_Blowout
-                                        "Overlay" : "overlay.png",    //Location in Shader: u_Overlay
-                                        "Map" : "map_2.png",          //Location in Shader: u_Map
+`NSDictionary * filterDict = @{
+                                    @"name":@"Filter 2",
+                                    @"shader":@"noob_filter_shader",
+                                    @"files":{
+                                        @"Blowout" : @"blowout.png",    //Location in Shader: u_Blowout
+                                        @"Overlay" : @"overlay.png",    //Location in Shader: u_Overlay
+                                        @"Map" : @"map_2.png",          //Location in Shader: u_Map
                                         }
                                     };
 GLFilter * filter = [[GLFilter alloc] initWithDictionary:filterDict];
-[YourViewController setCurrentFilter:filter]; 
+[YourViewController setCurrentFilter:filter];`
 and you are done.
 
 
