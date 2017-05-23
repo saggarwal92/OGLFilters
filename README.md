@@ -18,7 +18,7 @@ and override the function returning the image you would like to use to apply fil
 Depending on your requirements, you may also add your *YourViewController* in a container and set it's custom size
 
 
-# SAMPLE FILTER INCLUDED IN THE APPLICATION
+### SAMPLE FILTER INCLUDED IN THE APPLICATION
 ```
 NSDictionary * filterDict = @{
                                     @"name":@"Filter 2",
