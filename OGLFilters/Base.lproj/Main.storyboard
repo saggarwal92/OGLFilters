@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="avC-S8-BVr">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GLKit View Controller-->
+        <scene sceneID="QQq-kR-NLH">
+            <objects>
+                <glkViewController preferredFramesPerSecond="30" id="avC-S8-BVr" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6G2-O0-IvH"/>
+                        <viewControllerLayoutGuide type="bottom" id="iDo-MC-Je7"/>
+                    </layoutGuides>
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="iYT-5y-Drc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U0Y-6n-ojB">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Original" width="100" id="pJp-LG-aQZ">
+                                        <connections>
+                                            <action selector="showOriginal:" destination="avC-S8-BVr" id="zCo-un-JqC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Filter 1" width="100" id="PRp-J2-AfI">
+                                        <connections>
+                                            <action selector="applyFilter:" destination="avC-S8-BVr" id="3ai-3b-3Yb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Filter 2" width="100" id="g0c-0n-5WX">
+                                        <connections>
+                                            <action selector="applyFilter2:" destination="avC-S8-BVr" id="6mP-1o-0nV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <connections>
+                            <outlet property="delegate" destination="avC-S8-BVr" id="Wm6-64-J1M"/>
+                        </connections>
+                    </glkView>
+                </glkViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqR-Om-xNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-340" y="141.67916041979012"/>
+        </scene>
+    </scenes>
+</document>
